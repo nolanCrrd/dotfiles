@@ -1,5 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+set -gx MANGOHUD 1
+
 # overwrite greeting
 # potentially disabling fastfetch
 #function fish_greeting
