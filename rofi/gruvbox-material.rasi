@@ -6,16 +6,16 @@
  */
 
 * {
-    bg0: #282828;
-    bg1: #32302f;
-    grey0: #7c6f64;
-    fg0: #d4be98;
+    bg0: #D2BE98;
+    bg1: #c6b28c;
+    grey0: #7C5E4C;
+    fg0: #282828;
 
     blue: #7daea3;
     red: #ea6962;
     orange: #e78a4e;
     green: #a9b665;
-    bgStatusline3: #7c6f64;
+    bgStatusline3:  #7C5E4C;
 
     background-color: @bg0;
 }

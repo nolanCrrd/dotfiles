@@ -9,8 +9,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 15
-vim.opt.sidescrolloff = 10
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 5
 
 -- [Indentation] --
 vim.opt.list = true
@@ -115,10 +115,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Set filetype-specific settings
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup,
-  pattern = {},
+  pattern = { "typescriptreact", "javascriptreact", "typescript", "javascript" },
   callback = function()
-    vim.opt_local.tabstop = 4
-    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.expandtab = true
   end,
 })
 

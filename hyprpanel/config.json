@@ -4,7 +4,7 @@
   ],
   "scalingPriority": "hyprland",
   "theme.bar.floating": true,
-  "bar.autoHide": "never",
+  "bar.autoHide": "single-window",
   "theme.bar.location": "top",
   "theme.font.name": "JetBrainsMonoNL Nerd Font Propo",
   "theme.font.style": "normal",
