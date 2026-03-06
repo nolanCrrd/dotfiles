@@ -10,7 +10,6 @@ return {
                     multilines = false,  -- Désactive le mode multiligne
                 }
             })
-            
             -- Désactive les diagnostics virtuels natifs
             vim.diagnostic.config({ virtual_text = false })
         end,

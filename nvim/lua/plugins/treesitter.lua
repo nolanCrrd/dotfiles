@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   config = function()
-    require("nvim-treesitter.configs").setup({
+    require("nvim-treesitter.config").setup({
       -- Installe tous les parsers automatiquement
       ensure_installed = { "lua", 
                 "vim", 
@@ -13,7 +13,8 @@ return {
                 "bash",
                 "c",
                 "cpp",
-                "make"
+                "make",
+				"rust",
             },
       
       -- Installe les parsers de manière synchrone (seulement pour ensure_installed)

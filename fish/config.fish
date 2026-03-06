@@ -1,15 +1,41 @@
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+function fish_prompt -d "Write out the prompt"
+    # This shows up as USER@HOST /home/user/ >, with the directory colored
+    # $USER and $hostname are set by fish, so you can just use them
+    # instead of using `whoami` and `hostname`
+    printf '%s@%s %s%s%s > ' $USER $hostname \
+        (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+end
 
-set -gx MANGOHUD 1
+if status is-interactive # Commands to run in interactive sessions can go here
 
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
+    # No greeting
+    set fish_greeting
 
-alias llt4='lsd -l --tree --depth 4'
-alias lt4='lsd --tree --depth 4'
-alias cdf='cd (find / -type d 2> /dev/null | fzf)'
-alias cdfh='cd (find . -type d 2> /dev/null | fzf)'
-alias ccsan='cc -g -fsanitize=address,undefined,leak -fno-omit-frame-pointer'
+    # Use starship
+    starship init fish | source
+    if test -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+        cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+    end
+
+    # Aliases
+    alias clear "printf '\033[2J\033[3J\033[1;1H'" # fix: kitty doesn't clear properly
+    alias celar "printf '\033[2J\033[3J\033[1;1H'"
+    alias claer "printf '\033[2J\033[3J\033[1;1H'"
+    alias ls 'eza --icons'
+    alias pamcan pacman
+    alias q 'qs -c ii'
+    
+end
+
+function nvim
+    # 1. On enlève la marge pour que l'éditeur remplisse tout l'écran
+    kitty @ set-spacing margin=0
+    
+    # 2. On lance Neovim avec les arguments passés (le fichier à ouvrir)
+    command nvim $argv
+    
+    # 3. Quand on quitte Neovim, on remet ta marge préférée de 21.75
+    kitty @ set-spacing margin=21.75
+end
+
+zoxide init fish | source
