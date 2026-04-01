@@ -3,7 +3,6 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    explorer = { enabled = true },
     picker = { enabled = true },
     dashboard = { enabled = true },
     indent = { enabled = true, animate = { enabled = false } },

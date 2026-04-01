@@ -9,6 +9,7 @@ return {
 		  typescriptreact = { "prettier" },
 		  css = { "prettier" },
 		  json = { "prettier" },
+		  html = { "prettier"},
 		},
 		format_on_save = {
 		  timeout_ms = 500,

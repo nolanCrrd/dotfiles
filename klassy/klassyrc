@@ -1,0 +1,32 @@
+[Exceptions]
+ExceptionWindowPropertyPattern=kitty
+HideTitleBar=Always
+
+[Global]
+LookAndFeelSet=Perso Dark
+RefreshedConfig=6.5.3
+
+[ShadowStyle]
+ShadowSize=ShadowSmall
+ShadowStrength=51
+
+[Style]
+FrameCustomCornerRadius=10
+
+[Windeco]
+ButtonIconStyle=StyleTraditional
+IconSize=IconSmallMedium
+WindowCornerRadius=8
+
+[Windeco Exception 0]
+BorderSize=0
+Enabled=true
+ExceptionBorder=false
+ExceptionMatchTitleBarToApplicationColor=false
+ExceptionPreset=
+ExceptionProgramNamePattern=
+ExceptionWindowPropertyPattern=kitty
+ExceptionWindowPropertyType=0
+HideTitleBar=1
+OpaqueTitleBar=false
+PreventApplyOpacityToHeader=false

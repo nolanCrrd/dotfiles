@@ -1,6 +1,18 @@
 require("config.lazy")
 require("keymaps")
 
+vim.opt.guicursor = {
+    "n-v-c:block-Cursor",        -- Normal / Visual / Command mode : bloc
+    "i-ci-ve:ver25-CursorInsert", -- Insert mode : curseur vertical
+    "r-cr-o:hor20",              -- Replace / Command replace / Operator : barre horizontale
+}
+
+-- Définir les couleurs pour que l’inversion fonctionne
+vim.cmd [[
+  hi Cursor gui=reverse cterm=reverse
+  hi CursorInsert gui=reverse cterm=reverse
+]]
+
 vim.api.nvim_set_hl(0, "SnacksPickerDir", { link = "Text" })
 vim.api.nvim_set_hl(0, "SnacksPickerPathHidden", { link = "Text" })
 vim.api.nvim_set_hl(0, "SnacksPickerGitStatusUntracked", { link = "Special" })

@@ -61,7 +61,6 @@ map("n", "<leader>qa", ":qa<CR>", { desc = "Tout quitter" })
 
 -- Accès rapide
 map("n", "<leader>rc", ":e ~/.config/nvim/init.lua<CR>", { desc = "Ouvrir init.lua" })
-map("n", "<leader>e", function() require("snacks").explorer() end, { desc = "Snacks Explorer" })
 
 -- =============================================================================
 -- SECTION 5: GESTION DES ONGLETS (Tabs)
