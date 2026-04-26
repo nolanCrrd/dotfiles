@@ -7,6 +7,12 @@ vim.opt.guicursor = {
     "r-cr-o:hor20",              -- Replace / Command replace / Operator : barre horizontale
 }
 
+vim.filetype.add({
+    extension = {
+        h = "c"
+    }
+})
+
 -- Définir les couleurs pour que l’inversion fonctionne
 vim.cmd [[
   hi Cursor gui=reverse cterm=reverse
